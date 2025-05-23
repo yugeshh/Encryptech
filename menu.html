@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            background-image: url('https://wallpaperaccess.com/full/2939795.jpg');
+            background-size: cover;
+            background-position: top;
+            color: #b07ff9;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px; /* Adjust the gap between buttons */
+            margin-top: 100px; /* Adjust the spacing from the top */
+            flex-wrap: wrap;
+        }
+        .button {
+            text-decoration: none;
+            text-align: center;
+            color: #faf6f6; /* Black text color */
+        }
+        .button img {
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .button img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 5px 15px rgba(248, 247, 247, 0.5);
+        }
+        .button span {
+            display: block; /* Places the text on a new line below the image */
+            margin-top: 10px; /* Adds some spacing between the image and text */
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #f3f3f1; /* Replace with your desired background color */
+            color: #000; /* Text color */
+            padding: 5px 10px; /* Adds padding around the text */
+            border-radius: 5px; /* Optional: Adds rounded corners */
+            text-align: center; /* Aligns text within the span */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose an Option</h1>
+        <div class="button-container">
+        
+             <div class="button">
+                <a href="{{ url_for('share_file') }}">
+                    <img src="https://w0.peakpx.com/wallpaper/868/430/HD-wallpaper-social-networks-blue-background-social-networks-icons-blue-light-globe-global-networks-social-networks-blue-background-social-networks-concepts.jpg" alt="Share Files">
+                </a>
+                <span>Share Files</span>
+                
+            </div>
+            <div class="button">
+                <a href="{{ url_for('index') }}">
+                    <img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/el5xl29trhts1ev8o1ea.PNG" alt="Encrypt/Decrypt Files">
+                </a>
+                <span>Encrypt/Decrypt Files</span>
+            </div>
+            <div class="button">
+                <a href="{{ url_for('view_activity_log') }}">
+                    <img src="https://moosocial.com/wp-content/uploads/2018/02/Activities-Log.png" alt="View Activity Log">
+                </a>
+                <span>View Activity Log</span>
+            </div>
+            <div class="button">
+                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=yugee03@gmail.com&su=Hello&body=Hi%20Yugee,%20this%20is%20a%20test%20email!" >
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.loCwsn7u3iAGhlFClCumdgHaHa&pid=Api&P=0&h=180" alt="Send Email">
+                </a>
+                <span>Send Email</span>
+            </div>
+            <div class="button">
+                <a href="{{ url_for('hacking_practice') }}" >
+                    <img src="https://1.bp.blogspot.com/-L9JFM9DHhZU/XYo_F0JwglI/AAAAAAAAA5k/0zLDRrWn_kgFkJOTfr5haPIblvCvWVJUgCLcBGAsYHQ/s1600/ETHICAL%2BHACKER%2B2019.jpg" alt="Ethical ">
+                </a>
+                <span>Test Vulnerability</span>
+            </div>
+             
+            
+        </div>
+    </div>
+</body>
+ </html>

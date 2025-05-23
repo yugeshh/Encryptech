@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head><title>Add Blog</title></head>
+<body>
+    <h1>Add New Blog Post</h1>
+    {% if message %}
+        <p style="color: red;">{{ message }}</p>
+    {% endif %}
+    <form method="post">
+        <label>Title:</label><br>
+        <input type="text" name="title" required><br><br>
+        <label>Content:</label><br>
+        <textarea name="content" rows="5" cols="40" required></textarea><br><br>
+        <input type="submit" value="Post">
+    </form>
+</body>
+</html>

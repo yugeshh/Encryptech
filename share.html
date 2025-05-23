@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Encrypted Files</title>
+    <style>
+        body {
+            background-image: url('https://wallpaperaccess.com/full/723607.jpg');
+            background-size: cover;
+            background-position: top;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        form {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            color: #fff;
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        input, select, textarea {
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+        textarea {
+            resize: none;
+        }
+        button, input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #250ce4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover, input[type="submit"]:hover {
+            background-color: #1a0a7b;
+        }
+        .message {
+            color: #e9e6e6;
+        }
+        .share-link, .back-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #cc00ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .share-link:hover, .back-link:hover {
+            background-color: #f28dcd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Share Encrypted Files</h2>
+        <form action="/share" method="POST" enctype="multipart/form-data">
+            <!-- File Input -->
+            <label for="files">Select Encrypted Files:</label>
+            <input type="file" id="files" name="files[]" multiple required>
+
+            <!-- Recipient Email -->
+            <label for="recipient_email">Recipient Email:</label>
+            <input type="email" id="recipient_email" name="recipient_email" placeholder="Enter Recipient's Email Address" required>
+
+            <!-- Security Question -->
+            <label for="security_answer_flight">Security Question:</label>
+            <input type="password" id="security_answer_flight" name="security_answer_flight" placeholder="To what city did you go on the first time you flew on a plane?" required>
+
+            <!-- Permission Level Dropdown 
+            <label for="permission_level">Permission Level:</label>
+            <select name="permission_level" id="permission_level" required>
+                <option value="Read-only">Read-only</option>
+                <option value="Editable">Editable</option>
+            </select>      -->      
+
+            <!-- File Description -->
+            <label for="file_comment">File Description:</label>
+            <textarea name="file_description" id="file_description" rows="4" cols="50" placeholder="Add a comment or description for the file (optional)"></textarea>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Share">
+        </form>
+
+        <!-- Message Display -->
+        <div class="message">
+            <h2>{{ message }}</h2>
+            <a class="share-link" href="/menu">Go back to main page</a>
+        </div>
+    </div>
+</body>
+</html>

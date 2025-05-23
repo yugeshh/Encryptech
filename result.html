@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-image: url('https://wallpapercave.com/wp/wp5382827.jpg');
+            background-size: cover;
+            background-position: top;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .message-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .message {
+            color: #fff;
+        }
+        a {
+            color: #c47f07;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0eeb8f;
+        }
+        .share-link, .back-link {
+
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #cc00ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .share-link:hover, .back-link:hover {
+            background-color: #f28dcd;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message-container">
+            <h1 class="message">{{ message }}</h1>
+            <p>{{ expiration_message }}</p>
+            <a class="share-link" href="{{ url_for('share_file', filename=filename) }}">Share File ➔</a><br><br>
+            <a class="back-link" href="/menu">Go back to main page ➔</a>
+        </div>
+    </div>
+</body>
+</html>

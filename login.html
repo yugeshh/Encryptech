@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/originals/ba/af/95/baaf95bb3133f114cb754384e5b47042.jpg');
+            background-size: cover;
+            background-position: top;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .login-form {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background: rgba(255, 255, 255, 0.7);
+            color: #333;
+        }
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background: #0056b3;
+        }
+        .error {
+            color: #ff4646;
+        }
+        .share-link, .back-link {
+
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f28dcd;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .share-link:hover, .back-link:hover {
+            background-color: #cc00ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ENCRYPTECT</h1>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        <form class="login-form" method="POST">
+            <input type="text" id="username" name="username" placeholder="Username" required><br>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <value>Security Question: </value>
+            <input type="password" id="security_answer_cook" name="security_answer_cook" placeholder="What was the first thing that you learned to cook?" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p class="share-link" >Welcome to EncrypTECH !!!   <a href="/blog">  Visit our blog</a> to learn more about Us.</p>
+
+    </div>
+</body>
+</html>

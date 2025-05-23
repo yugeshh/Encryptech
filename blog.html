@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> BLOG ABOUT EncrypTECH</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+        h1 {
+            font-weight: 400;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+            margin: 0;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        main {
+            max-width: 1400px;
+            margin: auto;
+            box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1)
+        }
+
+        #tfarming {
+            background: #ffe4e1;
+        }
+
+        #tfarming-text {
+            display: flex;
+            flex: 0 1 40vw;
+            height: 50vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+
+        #tfarming-text h2 {
+            color:#e59711;
+        }
+
+        #tfarming-image {
+            background: url(https://wallpapers.com/images/hd/blogging-backdrop-8ifwoxtwf7mdg268.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 50vh;
+            flex: 0 1 60vw;
+            margin: 0;
+        }
+
+        .btn {
+            padding: 0.5rem 2rem;
+            border: 1px solid #ffe4e1;
+            display: inline-block;
+            margin: 2rem 0 0;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #333;
+            transition: background 500ms ease;
+        }
+
+        .btn:hover {
+            background: #d46ee9;
+        }
+
+        #header {
+            padding: 1.5rem;
+            text-align: center;
+            background:#047a00;
+            color: #fff;
+        }
+
+        #header h2 {
+            border-left: 1px dotted #fff;
+            border-right: 1px dotted #fff;
+            display: inline-block;
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+
+        .caption {
+            padding: 0.8rem;
+            text-align: center;
+            
+        }
+
+
+/*Screen Sizes 500px +*/
+
+        @media(min-width: 31.25rem) {
+            #tfarming {
+                display: flex;
+                height: 100%;
+            }
+
+            #tfarming-text {
+                height: 100vh;
+            }
+
+            #tfarming-image {
+                height: 100vh;
+            }
+        }
+
+/*Screen Sizes 700px +*/
+
+        @media(min-width: 43.75rem) {
+            .btn {
+                padding: 1rem 3rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 0;
+            font-size: x-large;
+            background: #ffe4e1;
+            height: auto;
+        }
+
+        pre {
+            font-family:cursive;
+            font-size:large;
+            line-height: 1.6;
+            text-align: center;
+            white-space: pre-wrap;
+            padding: 0 2rem;
+            margin: 0;
+            color: #333;
+        }
+        .share-link, .back-link {
+
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #cc00ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .share-link:hover, .back-link:hover {
+            background-color: #f28dcd;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+        
+        <div id="tfarming">
+            <div id="tfarming-text">
+                <div id="tfarming-text-inner">
+                    <b><h1>EncrypTECH.</h1></b>
+                    <b><h2>Harness Unrivaled Security Solutions</h2></b>
+                    <a href="#images" class="btn" id="view-work">
+                        ↠ Delve Deeper
+                    </a>
+                </div>
+            </div>
+            <div id="tfarming-image"></div>
+        </div>
+        <div id="images">
+            <div id="header">
+                <h2>Elevate Your Security Standards</h2>
+            </div>
+
+            <div class="caption">
+                <h3>EncrypTECH.</h3>
+                <pre>               In an era defined by digital innovation, encryption stands as a stalwart guardian of privacy and security. 
+                   Its necessity stems from the omnipresent threat of data breaches and unauthorized access. This project 
+                   ingeniously amplifies security through a cascading array of measures, compounding protection at each stage. 
+                   File encryption and decryption fortify data integrity, while email notifications provide vigilant oversight, 
+                   empowering users with real-time awareness. The integration of security questions adds an additional layer of 
+                   authentication, further fortifying access control. Notably, the capability to share encrypted files with a 
+                   passcode underscores a commitment to usability without compromising security, epitomizing a harmonious fusion 
+                   of robust encryption and user-centric design. This holistic approach epitomizes the project's commitment to 
+                   fortifying digital landscapes with impenetrable defenses, safeguarding against the ever-evolving landscape of 
+                   cyber threats.</pre> <br><br>
+                   
+                <a class="share-link" href="/menu"> Go back to main page</a>
+
+            </div>            
+        </div>
+    </main>
+</body>
+ 
+</html>
